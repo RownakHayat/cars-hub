@@ -1,11 +1,12 @@
 "use client";
-import { SearchManuFacturerProps } from '@/types';
+
 import { Combobox, Transition } from '@headlessui/react';
 import Image from 'next/image';
 import React, { useState, Fragment }  from 'react';
 import carLogo from '../../public/Image/svgImage/car-logo.svg'
 
 import { manufacturers } from "../../constants/index";
+import { SearchManuFacturerProps } from './types';
 
 const SearchManufacturer = ({ manufacturer, setManuFacturer }: SearchManuFacturerProps) => {
     const [query, setQuery] = useState("");
@@ -52,7 +53,7 @@ const SearchManufacturer = ({ manufacturer, setManuFacturer }: SearchManuFacture
               afterLeave={() => setQuery("")} // Reset the search query after the transition completes
             >
               <Combobox.Options
-                className='absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
+                className='mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'
                 static
               >
                 {filteredManufacturers.length === 0 && query !== "" ? (

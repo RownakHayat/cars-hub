@@ -1,8 +1,11 @@
 "use client";
-import { CustomButtonProps } from '@/types';
-import React from 'react';
 
-const CustomButtons = ({ title, containerStyle, handleClick, btnType}: CustomButtonProps) => {
+import React from 'react';
+import { CustomButtonProps } from './types';
+import Image from 'next/image';
+import rightarrow from '../../public/Image/svgImage/right-arrow.svg'
+
+const CustomButtons = ({ title, containerStyle, handleClick, btnType, textStyles, rightIcon}: CustomButtonProps) => {
      
     return (
         <button 
@@ -12,7 +15,12 @@ const CustomButtons = ({ title, containerStyle, handleClick, btnType}: CustomBut
         className={`custom-btn ${containerStyle}`}
         onClick={handleClick}
         >
-            <span className={`flex-1`}>{title}</span>
+            <span className={`flex-1 ${textStyles}`}>{title}</span>
+            {rightarrow && (
+                <div className="relative w-6 h-6">
+                    <Image src={rightarrow} alt='/' className='object-contain' fill/>
+                </div>
+            )}
         </button>
     );
 };

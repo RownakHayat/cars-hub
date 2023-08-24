@@ -4,6 +4,8 @@ import Header from "./Header/Header"
 import Navbar from "./Navbar/Navbar"
 import SearchBar from '@/components/SearchBar/SearchBar';
 import CustomFilter from '@/components/CustomFilter/CustomFilter';
+import CarDetails from './CarDetails/CarDetails';
+
 
 export {
   Header,
@@ -12,4 +14,5 @@ export {
   Footer,
   SearchBar,
   CustomFilter,
+  CarDetails,
 }

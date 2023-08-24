@@ -3,7 +3,7 @@
 import React from 'react'
 import CustomButtons from '../CustomButtons/CustomButtons'
 import Image from 'next/image';
-import headerPng from '../../public/Image/header.png'
+import headerImg from '../../public/Image/header.png'
 import headerbg from '../../public/Image/header-bg.png'
 
  
@@ -27,7 +27,7 @@ const handleScroll =() =>{
         </div>
         <div className="header__image-container">
             <div className="header__image">
-                <Image src={headerPng} alt="header" className='object-container absolute xl:top-[10rem]'/>
+                <Image src={headerImg} alt="header" className='object-container absolute xl:top-[10rem]'/>
                 <div
                 style={{
                     backgroundImage: `url(${headerbg.src})`,
